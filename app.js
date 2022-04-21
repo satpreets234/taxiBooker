@@ -16,7 +16,9 @@ app.use(bodyParser.json());
 const newPerson=require('./models/taxiBooking');
 const functions=require('./controller/taxiContoller');
 const userFunctions=require('./controller/userRegister');
-
+app.get('/',(req,res)=>{
+    res.send('hellos')
+})
 app.get('/alltaxi',functions.alltaxis);
 app.post('/newtaxi',upload.single('file'),functions.registerTaxi);
 app.delete('/taxi',functions.deleteTaxi);
