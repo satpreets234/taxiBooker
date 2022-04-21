@@ -1,1 +1,1 @@
-web:node taxiBooker/app.js
+web:node app.js
