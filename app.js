@@ -29,6 +29,6 @@ app.post('/verify',userFunctions.isverify);
 app.post('/acceptbooking',functions.acceptbooking);
 app.post('/cancelbooking',verifyFunction.verifyToken,userFunctions.cancelbooking);
 
-app.listen(process.env.WEB_PORT_NUMBER,()=>{
+app.listen(process.env.PORT || 6666,()=>{
     console.log('app listening at port ****')
 })
