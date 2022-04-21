@@ -1,4 +1,4 @@
-const nodeMailer=require('nodeMailer');
+const nodeMailer=require('nodemailer');
 const dotenv=require('dotenv');
 var transport=nodeMailer.createTransport({service:'Gmail',host:'smtp.gmail.com',port:252,auth:{
     user:`${process.env.EMAILFROM}`,
