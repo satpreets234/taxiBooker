@@ -14,5 +14,5 @@ const registerer=new mongoose.Schema({
      // path:{type:String,required:true},
      // userId:{type:mongoose.Schema.Types.ObjectId,ref:'users'}
 // })
-module.exports.userImages=mongoose.model('userImages',userImages);
+// module.exports.userImages=mongoose.model('userImages',userImages);
 module.exports.registerer=mongoose.model('users',registerer);
