@@ -17,14 +17,14 @@ module.exports.registerUsers=async(req,res)=>{
         firstName,lastName,email,number,password,isVerify,role,otp
     });
     // const jwtToken=jwt.sign({_id:newRegisterPerson._id},secretKey,{expiresIn:'1d'})
-    newRegisterPerson.save();
-    console.log(newRegisterPerson);
-    const images=new userImages({path:req.file.path,userId:newRegisterPerson._id});
-    images.save(function (err,docs){
+    newRegisterPerson.save(function (err,docs){
         if (err) throw err;
         else{
-        res.send(newRegisterPerson+'\n'+ docs)}
-    })}
+        res.send(docs)}});
+    // console.log(newRegisterPerson);
+    // const images=new userImages({path:req.file.path,userId:newRegisterPerson._id});
+    // images.save()
+}
 }
 
 module.exports.login=async(req,res)=>{
