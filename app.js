@@ -11,6 +11,7 @@ const image=require('./models/taxiRegister').pic;
 const {userImages,registerer}=require('./models/register');
 const verifyFunction=require('./controller/verifyToken');
 const middleware=require('./middleware/checkExisting');
+const cors=require('cors');
 app.use(cors())
 app.use(bodyParser.json());
 const newPerson=require('./models/taxiBooking');
