@@ -61,7 +61,7 @@ module.exports.login=async(req,res)=>{
                    as:"docs"
                }
            }])
-           res.send(allRequests)
+           res.send({requests:allRequests,token:loginToken})
            
         }else{res.send('password incorrect')}}
     else{
