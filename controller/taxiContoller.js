@@ -19,12 +19,13 @@ module.exports.registerTaxi=async(req,res)=>{
          cabtype:req.body.cabtype,description:req.body.description,driverId:req.body.driverId
      });
      newtaxi.save();
-     const image=await new pic({
-         path:req.file.path,
-         vehicleId:newtaxi._id
-     });
-     image.save();
-     res.send(newtaxi+'\n'+image)}
+    //  const image=await new pic({
+    //      path:req.file.path,
+    //      vehicleId:newtaxi._id
+    //  });
+    //  image.save();
+     res.send(newtaxi)}
+    //  +'\n'+image)}
      else{res.send('Duplicate data,Permission denied')}
 
 }else if(userRole.role==='Driver' && userRole.isVerify==false ){
